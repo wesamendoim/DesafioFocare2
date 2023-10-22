@@ -9,9 +9,12 @@ namespace ConsoleApp1
 {
     public class Selenium
     {
+        public void BrowserChrome(string url)
         public ChromeDriver BrowserChrome()
         {
             ChromeDriver objChrome = new ChromeDriver();
+
+            objChrome.Url = url;
 
             return objChrome;
 
