@@ -20,8 +20,7 @@ namespace ConsoleApp1
             ChromeDriver chromeDriver;
             IWebElement objElement_1;
             IWebElement objElement_2;
-            //IWebElement objELement_3;
-
+            
             chromeDriver = objSelenium.BrowserChrome();
 
             chromeDriver.Url = "https://www.google.com.br";
@@ -30,7 +29,6 @@ namespace ConsoleApp1
             {
                 chromeDriver.FindElement(By.XPath("html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea")).SendKeys("RPA");
 
-                ///html/body/div[1]/div[3]/form/div[1]/div[1]/div[4]/center/input[1]
                 chromeDriver.FindElement(By.XPath("html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea")).SendKeys(OpenQA.Selenium.Keys.Enter);
 
                 objElement_1 = chromeDriver.FindElement(By.XPath("//*[@id='Odp5De']/div/div[1]/div/div[1]/block-component/div/div[1]/div/div/div/div/div[1]/div/div/div/div/div[2]/div/div/div[1]/div/span/a/h3"));
@@ -48,7 +46,7 @@ namespace ConsoleApp1
             else
             {
                 Console.WriteLine("Elemento não disponivel para o andamento do robô");
-
+                
             }
 
         }
